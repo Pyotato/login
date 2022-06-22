@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  color: rgb(95, 50, 50);
+  text-decoration: none;
+}
+.modal {
+  /*배경*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal.show {
+  display: block;
+  z-index: 100;
+}
+.modal_body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40em;
+  max-width: 40em;
+  max-height: 20em;
+  height: 20em;
+  padding: 40px;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 3px rgba(34, 36, 38, 0.15);
+  transform: translateX(-50%) translateY(-100%); /*중앙으로*/
+  overflow: hidden;
+}
+.modal2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 202vh;
+  max-height: 202vh;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal3 {
+  /*배경*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 206vh;
+  max-height: 206vh;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal2.show {
+  display: block;
+  z-index: 100;
+}
+.modal3.show {
+  display: block;
+  z-index: 100;
+}
+#mapShow {
+  display: none;
+  border: 1px solid;
+  width: 500px;
+  height: 300px;
+  position: relative;
+}
+#modal_buttons {
+  width: 100vw;
+  display: flex;
+  flex-direction: row-reverse;
+}
+#login {
+  margin: 1em;
+  padding: 0.5em;
+  background-color: #7f3811;
+  border: 0.1em solid #e48c32;
+  color: #e8d3bb;
+  width: 8em;
+  border-radius: 1em;
+}
+#joinMember {
+  margin: 1em;
+  padding: 0.5em;
+  background-color: #7f3811;
+  border: 0.1em solid #e48c32;
+  color: #e8d3bb;
+  width: 8em;
+  border-radius: 1em;
+}
+#wrap {
+  margin: 0 20em 0 24em;
+  margin-top: 50vh;
+  width: 40vw;
+  /* max-width: 30vw; */
+}
+#others > a > img {
+  width: 20px;
+}
+#loginbtn {
+  height: 3em;
+  background-color: #7f3811;
+  border: 0.1em solid rgb(110, 107, 107);
+  border-radius: 1em;
+  color: #e8d3bb;
+  width: 17em;
+  position: absolute;
+  left: 33%;
+  top: 25%;
+}
+#id_input {
+  width: 17em;
+  margin: 0;
+  height: 2em;
+  color: #7f3811;
+  border: 1px solid #7f3811;
+  position: absolute;
+  left: 33%;
+  top: -26%;
+}
+#pwd_input {
+  width: 17em;
+  height: 2em;
+  margin: 0;
+  color: #7f3811;
+  border: 1px solid #7f3811;
+  position: absolute;
+  left: 33%;
+  top: -15%;
+}
+#ad {
+  transform: translateX(51%) translateY(-65%);
+  /* position: absolute;
+    top: -50%;
+    left: 53%; */
+}
+#saveId {
+  position: absolute;
+  left: 33%;
+  top: -3%;
+}
+#findPwd {
+  position: absolute;
+  left: 33%;
+  top: 15%;
+}
+#findId {
+  position: absolute;
+  left: 33%;
+  top: 6%;
+}
+#ad_words {
+  font-family: "Sacramento", cursive;
+  font-size: 2em;
+  /* position: absolute;
+    top: 44%;
+    left: 33%; */
+  transform: translateX(50%) translateY(-35%);
+  width: 7em;
+  color: #7f3811;
+}
+#relative_body1 {
+  position: relative;
+}
+#relative_body2 {
+  position: relative;
+  margin-top: 30%;
+}
+#relative_body3 {
+  position: relative;
+  margin-top: 50%;
+}
+
+/*회원가입*/
+#wrap2 {
+  margin: 0 20em 10vh 30em;
+  /* margin-top: 50vh; */
+  width: 30vw;
+  position: absolute;
+  bottom: 35vh;
+  left: 50%;
+  transform: translateX(-150%);
+  max-width: 30vw;
+}
+#joinMwrap {
+  background-color: #f7faec;
+  width: 50vw;
+  height: 68em;
+  text-align: center;
+  margin: 3em 0;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border: 3px solid #7f3811;
+  border-radius: 1em;
+}
+#logolettering {
+  font-family: "Sacramento", cursive;
+  color: #e48c32;
+  font-size: 3em;
+  margin: 2vh 2vw 0 2vw;
+}
+.left {
+  margin-top: 1em;
+  text-align: left;
+  margin-left: 3vw;
+  margin-bottom: 3vh;
+  color: #7f3811;
+  font-size: 18px;
+  font-weight: 900;
+}
+#wrap_mini {
+  display: flex;
+  width: 50vw;
+  flex-wrap: wrap;
+}
+.agreement {
+  width: 2em;
+  margin: 1em;
+  margin-left: 3em;
+}
+.agreeQ {
+  /* width: 10em; */
+  margin-top: 1em;
+}
+#qualify1 {
+  font-size: 15px;
+  color: #e48c32;
+}
+#qualify2 {
+  font-size: 15px;
+  color: #e48c32;
+}
+#RptChkBtn {
+  height: 2em;
+  width: 7em;
+  background-color: #7f3811;
+  border: 0.1em solid rgb(110, 107, 107);
+  border-radius: 1em;
+  color: #e8d3bb;
+}
+#searchAddr {
+  height: 2em;
+  width: 7em;
+  background-color: #7f3811;
+  border: 0.1em solid rgb(110, 107, 107);
+  border-radius: 1em;
+  color: #e8d3bb;
+}
+#addr {
+  margin-left: 3em;
+}
+#addrAll {
+  margin-left: 3em;
+  width: 18em;
+}
+#confirmBtn {
+  height: 3em;
+  background-color: #e48c32;
+  border: 0.1em solid rgb(110, 107, 107);
+  margin: 1em 2em;
+  border-radius: 1em;
+  color: #7f3811;
+  width: 17em;
+  font-family: "Sacramento", cursive;
+  font-size: 1em;
+  font-weight: 900;
+}
+h1 {
+  text-align: center;
+  transform: translateX(-3%);
+}
+h2 {
+  color: #e48c32;
+}
+i {
+  font-size: 2em;
+  color: #7f3811;
+}
+#leaveModal {
+  margin-left: 40vw;
+  margin-bottom: 1em;
+}
+#leaveModal2 {
+  margin-left: 40vw;
+  margin-bottom: 1em;
+}
