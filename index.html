@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/785d4a59e2.js" crossorigin="anonymous"></script>
+    <!--지도-->
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <div class="modal">
+      <!--로그인 모달창-->
+      <div id="relative_body1">
+        <div class="modal_body">LOGIN</div>
+        <div id="wrap">
+          <form action="memberJoin.jsp" method="post"/>
+            <!--임의 값-->
+            <input
+              class="fix"
+              id="id_input"
+              type="text"
+              placeholder="아이디 입력"
+            /><br /><br />
+            <input
+              class="fix"
+              id="pwd_input"
+              type="password"
+              placeholder="비밀번호 입력"
+            /><br />
+            <div>
+              <div id="saveId">
+                <input id="checkBox" type="checkbox" /> 아이디 저장
+              </div>
+              <div id="findPwd"><a href="#">비밀번호 찾기</a></div>
+              <div id="findId"><a href="#">아이디 찾기</a></div>
+            </div>
+            <br />
+            <button id="loginbtn" type="button">로그인</button>
+          </form>
+        </div>
+        <div id="ad">
+          <img src="../imgs/advertisement.png" style="width: 15em" alt="광고" />
+          <div id="ad_words">Become a member for exclusive deals</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal2">
+      <div id="relative_body2" style="height: 70vh">
+        <div class="modal_body">
+          약관동의
+          <button type="button" id="leaveModal"><i class="fa-solid fa-square-xmark"></i></button>
+          <div id="terms_condi"></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal3">
+      <div id="relative_body3" style="height: 70vh">
+        <div class="modal_body" style="max-height: 36em;height: 32em;">
+          주소검색
+          <button type="button" id="leaveModal2"><i class="fa-solid fa-square-xmark"></i></button>
+          <div id="mapShow">
+</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal_buttons">
+      <!--로그인 모달활성 버튼-->
+      <button class="btn_open_popup1" id="login">로그인</button>
+    </div>
+
+    <div id="joinMwrap">
+      <div id="logolettering">Forget-me-not and Cinnamons</div>
+      <div class="left"><h1>회원가입</h1></div>
+      <div id>
+        <div class="left"><h2>약관동의</h2></div>
+        <div id="wrap_mini">
+          <div class="must">
+            <input id="nesschk1" type="checkbox" class="agreement" />이용약관
+            동의 (필수항목)
+          </div>
+          <div class="must">
+            <input id="nesschk2" type="checkbox" class="agreement" />개인정보
+            수집 및 이용 동의 (필수항목)
+          </div>
+          <div class="must">
+            <input id="nesschk3" type="checkbox" class="agreement" />환불약관
+            동의 (필수항목)
+          </div>
+          <div>
+            <input id="optchk1" type="checkbox" class="agreement" />마케팅
+            활용/수신 동의 (선택)
+          </div>
+          <div>
+            <input
+              id="optchk2"
+              type="checkbox"
+              class="agreement"
+            />문자메시지(SMS) 및 앱/푸시 알림
+          </div>
+          <div>
+            <input id="optchk3" type="checkbox" class="agreement" />이메일
+          </div>
+        </div>
+        <div class="left"><h2>필수정보 입력</h2></div>
+        <div class="left" id="wrap_mini2">
+          <div class="agreeQ" id="nameMember">이름 <input type="text" /></div>
+          <div class="agreeQ">
+            이메일 <input type="text" id="emailFront" />@<input
+              type="text"
+              id="emailBack"
+            />
+          </div>
+          <div class="agreeQ">
+            아이디
+            <input
+              id="idJoin"
+              type="text"
+              placeholder="영문시작,숫자포함 5~12자"
+            />
+            <!--^[a-z]+[a-z0-9]{4,11}$-->
+            <button type="button" id="RptChkBtn">중복확인</button>
+            <div class="agreeQ" id="qualify1">
+              <!-- 영문으로 시작하여, 영문숫자포함 5~12자 -->
+            </div>
+          </div>
+          <div class="agreeQ">
+            비밀번호
+            <input type="password" id="pwdJoin" placeholder="비밀번호 입력" />
+          </div>
+          <div class="agreeQ" id="qualify2">
+            영문 대소문자,숫자,특수문자[!,@,#,%,&,?] 조합 8~15자리
+          </div>
+          <div class="agreeQ">
+            비밀번호 확인
+            <input type="password" id="repeatPwd" placeholder="비밀번호 입력" />
+          </div>
+          <div class="agreeQ">
+            휴대폰번호 <input type="text" id="phoneJoin" />
+          </div>
+        </div>
+      </div>
+
+      <div class="left"><h2>부가정보 입력 (선택)</h2></div>
+      <div class="left" id="wrap_mini2">
+        <div class="agreeQ">
+          생년월일 <input type="text" class="dob" placeholder="년" />
+          <input class="dob" type="text" placeholder="월" />
+          <input class="dob" type="text" placeholder="일" />
+        </div>
+        <div class="agreeQ">
+          주소 <input type="text" id="postNum" placeholder="우편번호" />
+          <button type="button" id="searchAddr">주소검색</button>
+        </div>
+        <div class="agreeQ">
+          <input type="text" id="addr" placeholder="주소" />
+        </div>
+        <div class="agreeQ">
+          <input type="text" id="addrAll" placeholder="상세주소" />
+        </div>
+      </div>
+      <div class="agreeQ">
+        <button type="button" id="confirmBtn">Submit</button>
+      </div>
+    </div>
+  </body>
+  <script src="../js/login.js"></script>
+</html>
